@@ -18,9 +18,11 @@ class CookieBar extends Control
     /** @var string style path */
     private $stylePath;
     /** @var string */
-    private $cookieName = 'cookie-bar';
+    private $cookieName = 'bar-cookie';
     /** @var string */
-    private $cookieExpire = '+10 year';
+    private $cookieExpire = '+10 years';
+    /** @var int */
+    private $showBlock = 0;
 
 
     /**
@@ -93,13 +95,18 @@ class CookieBar extends Control
 
     /**
      * Handle hide block.
+     *
+     * @throws \Nette\Application\AbortException
      */
     public function handleHideBlock()
     {
         $this->presenter->getHttpResponse()->setCookie($this->cookieName, 1, $this->cookieExpire);
+        $this->showBlock = 1;
 
         if ($this->presenter->isAjax()) {
             $this->redrawControl('snippetBlock');
+        } else {
+            $this->redirect('this');
         }
     }
 
@@ -110,8 +117,7 @@ class CookieBar extends Control
     public function render()
     {
         $template = $this->getTemplate();
-
-        $template->showBlock = $this->presenter->getHttpRequest()->getCookie($this->cookieName, 0);
+        $template->showBlock = $this->presenter->getHttpRequest()->getCookie($this->cookieName, $this->showBlock);
 
         $template->setTranslator($this->translator);
         $template->setFile($this->templatePath);
