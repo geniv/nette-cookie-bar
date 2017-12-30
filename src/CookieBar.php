@@ -18,7 +18,7 @@ class CookieBar extends Control
     /** @var string style path */
     private $stylePath;
     /** @var string */
-    private $cookieName = 'bar-cookie';
+    private $cookieName = 'cookie-bar';
     /** @var string */
     private $cookieExpire = '+10 years';
     /** @var int */
