@@ -1,7 +1,7 @@
 Nette cookie bar
 ================
 
-via: https://phpfashion.com/jak-na-souhlas-s-cookie-ve-zkurvene-eu
+via: https://phpfashion.com/jak-na-souhlas-s-cookie-v-eu
 
 Installation
 ------------

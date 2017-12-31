@@ -15,8 +15,6 @@ class CookieBar extends Control
     private $translator = null;
     /** @var string template path */
     private $templatePath;
-    /** @var string style path */
-    private $stylePath;
     /** @var string */
     private $cookieName = 'cookie-bar';
     /** @var string */
@@ -37,7 +35,6 @@ class CookieBar extends Control
         $this->translator = $translator;
 
         $this->templatePath = __DIR__ . '/CookieBar.latte';  // implicit path
-        $this->stylePath = __DIR__ . '/CookieBar.scss'; // implicit path
     }
 
 
@@ -50,19 +47,6 @@ class CookieBar extends Control
     public function setTemplatePath($path)
     {
         $this->templatePath = $path;
-        return $this;
-    }
-
-
-    /**
-     * Set style path.
-     *
-     * @param $path
-     * @return $this
-     */
-    public function setStylePath($path)
-    {
-        $this->stylePath = $path;
         return $this;
     }
 
