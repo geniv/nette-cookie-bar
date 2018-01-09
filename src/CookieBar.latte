@@ -1,8 +1,8 @@
 {snippet snippetBlock}
-    <div class="eu-cookies" n:if="!$showBlock">
+    <div class="nette-cookie-bar" n:if="!$showBlock">
         {_'cookie-bar-content'}
-        <a n:href="HideBlock!" class="ajax btn btn-success">{_'cookie-bar-button'}</a>
+        <a n:href="HideBlock!" class="ajax nette-cookie-bar-button">{_'cookie-bar-button'}</a>
         <a href="https://www.google.com/policies/technologies/cookies/" target="_blank">{_'cookie-bar-link'}</a>
     </div>
-    <noscript><style>.eu-cookies { display:none }</style></noscript>
+    <noscript><style>.nette-cookie-bar { display: none; }</style></noscript>
 {/snippet}
