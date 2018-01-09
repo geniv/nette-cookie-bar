@@ -1,15 +1,50 @@
-.eu-cookies {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: $white;
-  padding: 10px 0;
-  background-color: $black;
-  z-index: 1000;
-  text-align: center;
-}
 
-.eu-cookies button {
-  padding: 3px 20px;
+$nette-cookie-bar-link-color:       $white !default;
+$nette-cookie-bar-link-hover:       $link-color !default;
+
+$nette-cookie-bar-button-margin:    0 10px 0 5px !default;
+$nette-cookie-bar-button-padding:   3px 20px !default;
+$nette-cookie-bar-button-font-size: rem(20) !default;
+
+$nette-cookie-bar-padding:          6px 0 !default;
+$nette-cookie-bar-font-size:        rem(13) !default;
+$nette-cookie-bar-bg:               $black !default;
+$nette-cookie-bar-color:            $white !default;
+$nette-cookie-bar-z:                1000 !default;
+
+$nette-cookie-bar-structure: (
+    default,
+    link,
+    button
+) !default;
+
+
+@if index($nette-cookie-bar-structure, default) {
+    .nette-cookie-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: $nette-cookie-bar-color;
+        padding: $nette-cookie-bar-padding;
+        background-color: $nette-cookie-bar-bg;
+        z-index: $nette-cookie-bar-z;
+        text-align: center;
+        font-size: $nette-cookie-bar-font-size;
+        @if index($nette-cookie-bar-structure, link) {
+            a {
+                color: $nette-cookie-bar-link-color;
+                &:hover {
+                    color: $nette-cookie-bar-link-hover;
+                }
+            }
+        }
+        @if index($nette-cookie-bar-structure, button) {
+            &-button {
+                margin: $nette-cookie-bar-button-margin;
+                padding: $nette-cookie-bar-button-padding;
+                font-size: $nette-cookie-bar-button-font-size;
+            }
+        }
+    }
 }
