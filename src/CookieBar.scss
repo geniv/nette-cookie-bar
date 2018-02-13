@@ -1,21 +1,20 @@
 
-$nette-cookie-bar-link-color:       $white !default;
-$nette-cookie-bar-link-hover:       $link-color !default;
+$nette-cookie-bar-link-color:           $white !default;
+$nette-cookie-bar-link-hover:           $link-color !default;
 
-$nette-cookie-bar-button-margin:    0 10px 0 5px !default;
-$nette-cookie-bar-button-padding:   3px 20px !default;
-$nette-cookie-bar-button-font-size: rem(20) !default;
+$nette-cookie-bar-button-margin:        0 10px 0 5px !default;
+$nette-cookie-bar-button-padding:       3px 20px !default;
+$nette-cookie-bar-button-font-size:     rem(20) !default;
 
-$nette-cookie-bar-padding:          6px 0 !default;
-$nette-cookie-bar-font-size:        rem(13) !default;
-$nette-cookie-bar-bg:               $black !default;
-$nette-cookie-bar-color:            $white !default;
-$nette-cookie-bar-z:                1000 !default;
+$nette-cookie-bar-padding:              6px 0 !default;
+$nette-cookie-bar-font-size:            rem(13) !default;
+$nette-cookie-bar-bg:                   $black !default;
+$nette-cookie-bar-color:                $white !default;
+$nette-cookie-bar-z:                    1000 !default;
 
 $nette-cookie-bar-structure: (
     default,
     link,
-    button
 ) !default;
 
 
@@ -39,12 +38,10 @@ $nette-cookie-bar-structure: (
                 }
             }
         }
-        @if index($nette-cookie-bar-structure, button) {
-            &-button {
-                margin: $nette-cookie-bar-button-margin;
-                padding: $nette-cookie-bar-button-padding;
-                font-size: $nette-cookie-bar-button-font-size;
-            }
+        &__close {
+            margin: $nette-cookie-bar-button-margin;
+            padding: $nette-cookie-bar-button-padding;
+            font-size: $nette-cookie-bar-button-font-size;
         }
     }
 }
