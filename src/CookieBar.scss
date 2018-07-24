@@ -23,13 +23,13 @@ $nette-cookie-bar-structure: (
         position: fixed;
         bottom: 0;
         left: 0;
-        width: 100%;
-        color: $nette-cookie-bar-color;
-        padding: $nette-cookie-bar-padding;
-        background-color: $nette-cookie-bar-bg;
         z-index: $nette-cookie-bar-z;
-        text-align: center;
+        width: 100%;
+        padding: $nette-cookie-bar-padding;
         font-size: $nette-cookie-bar-font-size;
+        text-align: center;
+        color: $nette-cookie-bar-color;
+        background-color: $nette-cookie-bar-bg;
         @if index($nette-cookie-bar-structure, link) {
             a {
                 color: $nette-cookie-bar-link-color;

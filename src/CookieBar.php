@@ -7,7 +7,7 @@ use Nette\Localization\ITranslator;
 /**
  * Class CookieBar
  *
- * @author  geniv
+ * @author  geniv, MartinFugess
  */
 class CookieBar extends Control
 {
