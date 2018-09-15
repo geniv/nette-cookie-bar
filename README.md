@@ -31,14 +31,14 @@ usage:
 ```php
 protected function createComponentCookieBar(CookieBar $cookieBar): CookieBar
 {
-    //$cookieBar->setTemplatePath();
-    //$cookieBar->setCookieName();
-    //$cookieBar->setCookieExpire();
+//    $cookieBar->setTemplatePath(__DIR__ . '/templates/cookieBar.latte');
+//    $cookieBar->setCookieName('hradejov-bar');
+//    $cookieBar->setCookieExpire();
     return $cookieBar;
 }
 ```
 
-usage:
+usage (before `</body>`):
 ```latte
 {control cookieBar}
 ```
