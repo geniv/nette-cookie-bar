@@ -1,8 +1,10 @@
 {snippet snippetBlock}
     <div class="nette-cookie-bar" n:if="!$showBlock">
-        {_'cookie-bar-content'}
-        <a n:href="HideBlock!" class="ajax nette-cookie-bar__close btn-cookie-bar">{_'cookie-bar-button'}</a>
-        <a href="https://www.google.com/policies/technologies/cookies/" class="link-cookie-bar" target="_blank">{_'cookie-bar-link'}</a>
+        <p>
+            {_'cookie-bar-content'}
+            <a n:href="HideBlock!" class="ajax nette-cookie-bar__close btn-cookie-bar">{_'cookie-bar-button'}</a>
+            <a href="https://www.google.com/policies/technologies/cookies/" class="link-cookie-bar" target="_blank">{_'cookie-bar-link'}</a>
+        </p>
     </div>
     <noscript><style>.nette-cookie-bar { display: none; }</style></noscript>
 {/snippet}
