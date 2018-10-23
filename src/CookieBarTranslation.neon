@@ -1,3 +1,3 @@
-cookie-bar-content: "Tento web používá k poskytování služeb, personalizaci reklam a analýze návštěvnosti soubory cookie. Používáním tohoto webu s tím souhlasíte."
-cookie-bar-button: "V pořádku"
-cookie-bar-link: "Další informace"
+cookie-bar#content: "Tento web používá k poskytování služeb, personalizaci reklam a analýze návštěvnosti soubory cookie. Používáním tohoto webu s tím souhlasíte."
+cookie-bar#button: "V pořádku"
+cookie-bar#link: "Další informace"
