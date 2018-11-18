@@ -1,7 +1,9 @@
-Nette cookie bar
-================
+Cookie bar
+==========
 
-via: https://phpfashion.com/jak-na-souhlas-s-cookie-v-eu
+via: 
+- https://phpfashion.com/jak-na-souhlas-s-cookie-v-eu
+- http://www.cookiechoices.org/
 
 Installation
 ------------
@@ -15,8 +17,9 @@ or
 
 require:
 ```json
-"php": ">=5.6.0",
-"nette/nette": ">=2.4.0"
+"php": ">=7.0.0",
+"nette/nette": ">=2.4.0",
+"geniv/nette-general-form": ">=1.0.0"
 ```
 
 Include in application
@@ -32,8 +35,8 @@ usage:
 protected function createComponentCookieBar(CookieBar $cookieBar): CookieBar
 {
 //    $cookieBar->setTemplatePath(__DIR__ . '/templates/cookieBar.latte');
-//    $cookieBar->setCookieName('hradejov-bar');
-//    $cookieBar->setCookieExpire();
+//    $cookieBar->setCookieName('cookie-bar');
+//    $cookieBar->setCookieExpire('+10 years');
     return $cookieBar;
 }
 ```

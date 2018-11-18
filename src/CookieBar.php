@@ -1,5 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
+use GeneralForm\ITemplatePath;
 use Nette\Application\UI\Control;
 use Nette\Localization\ITranslator;
 
@@ -9,7 +10,7 @@ use Nette\Localization\ITranslator;
  *
  * @author  geniv, MartinFugess
  */
-class CookieBar extends Control
+class CookieBar extends Control implements ITemplatePath
 {
     /** @var ITranslator */
     private $translator = null;
@@ -41,13 +42,11 @@ class CookieBar extends Control
     /**
      * Set template path.
      *
-     * @param $path
-     * @return $this
+     * @param string $path
      */
-    public function setTemplatePath($path)
+    public function setTemplatePath(string $path)
     {
         $this->templatePath = $path;
-        return $this;
     }
 
 
