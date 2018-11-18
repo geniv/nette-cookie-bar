@@ -53,26 +53,22 @@ class CookieBar extends Control implements ITemplatePath
     /**
      * Set cookie name.
      *
-     * @param $name
-     * @return $this
+     * @param string $name
      */
-    public function setCookieName($name)
+    public function setCookieName(string $name)
     {
         $this->cookieName = $name;
-        return $this;
     }
 
 
     /**
      * Set cookie expire.
      *
-     * @param $time
-     * @return $this
+     * @param string $time
      */
-    public function setCookieExpire($time)
+    public function setCookieExpire(string $time)
     {
         $this->cookieExpire = $time;
-        return $this;
     }
 
 
