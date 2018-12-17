@@ -10,7 +10,7 @@ use Nette\Localization\ITranslator;
  *
  * @author  geniv, MartinFugess
  */
-class CookieBar extends Control implements ITemplatePath
+class CookieBar extends Control implements ICookieBar, ITemplatePath
 {
     /** @var ITranslator */
     private $translator = null;

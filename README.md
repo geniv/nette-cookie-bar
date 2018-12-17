@@ -12,14 +12,14 @@ $ composer require geniv/nette-cookie-bar
 ```
 or
 ```json
-"geniv/nette-cookie-bar": ">=1.0.0"
+"geniv/nette-cookie-bar": "^2.0"
 ```
 
 require:
 ```json
-"php": ">=7.0.0",
-"nette/nette": ">=2.4.0",
-"geniv/nette-general-form": ">=1.0.0"
+"php": ">=7.0",
+"nette/nette": ">=2.4",
+"geniv/nette-general-form": ">=1.0"
 ```
 
 Include in application
@@ -32,11 +32,11 @@ services:
 
 usage:
 ```php
-protected function createComponentCookieBar(CookieBar $cookieBar): CookieBar
+protected function createComponentCookieBar(ICookieBar $cookieBar): ICookieBar
 {
-//    $cookieBar->setTemplatePath(__DIR__ . '/templates/cookieBar.latte');
-//    $cookieBar->setCookieName('cookie-bar');
-//    $cookieBar->setCookieExpire('+10 years');
+    //$cookieBar->setTemplatePath(__DIR__ . '/templates/cookieBar.latte');
+    $cookieBar->setCookieName('nette-web-cookie-bar');
+    //$cookieBar->setCookieExpire('+10 years');
     return $cookieBar;
 }
 ```
