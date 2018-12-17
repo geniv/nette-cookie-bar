@@ -1,12 +1,14 @@
 <?php declare(strict_types=1);
 
+use GeneralForm\ITemplatePath;
+
 
 /**
  * Interface ICookieBar
  *
  * @author  geniv
  */
-interface ICookieBar
+interface ICookieBar extends ITemplatePath
 {
 
     /**
