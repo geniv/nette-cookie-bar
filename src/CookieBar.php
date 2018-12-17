@@ -1,6 +1,5 @@
 <?php declare(strict_types=1);
 
-use GeneralForm\ITemplatePath;
 use Nette\Application\UI\Control;
 use Nette\Localization\ITranslator;
 
@@ -10,7 +9,7 @@ use Nette\Localization\ITranslator;
  *
  * @author  geniv, MartinFugess
  */
-class CookieBar extends Control implements ICookieBar, ITemplatePath
+class CookieBar extends Control implements ICookieBar
 {
     /** @var ITranslator */
     private $translator = null;
