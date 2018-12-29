@@ -37,11 +37,19 @@ protected function createComponentCookieBar(ICookieBar $cookieBar): ICookieBar
     //$cookieBar->setTemplatePath(__DIR__ . '/templates/cookieBar.latte');
     $cookieBar->setCookieName('nette-web-cookie-bar');
     //$cookieBar->setCookieExpire('+10 years');
-    return $cookieBar;
+    return clone $cookieBar;
 }
 ```
 
 usage (before `</body>`):
 ```latte
 {control cookieBar}
+```
+
+resolve problem:
+----------------
+`Nette\InvalidStateException: Component 'cookieBar' already has a parent. in ...`
+
+```php
+return clone $cookieBar;
 ```
